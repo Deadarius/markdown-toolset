@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tape tests/spec.js | tap-difflet"
+    "test": "tap-prettify tests/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,8 @@
   "homepage": "https://github.com/Deadarius/markdown-toolset#readme",
   "devDependencies": {
     "tap-difflet": "^0.3.0",
-    "tape": "^4.0.0"
+    "tap-prettify": "0.0.2",
+    "tape": "^4.0.0",
+    "tape-catch": "^1.0.4"
   }
 }
