@@ -1,19 +1,22 @@
 {
   "name": "markdown-toolset",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "coffeetape tests/spec.coffee | tap-difflet"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Deadarius/markdown-toolset.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Deadarius/markdown-toolset/issues"
   },
-  "homepage": "https://github.com/Deadarius/markdown-toolset#readme"
+  "homepage": "https://github.com/Deadarius/markdown-toolset#readme",
+  "devDependencies": {
+    "coffeetape": "^1.0.1"
+  }
 }
