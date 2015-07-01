@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "coffeetape tests/spec.coffee | tap-difflet"
+    "test": "tape tests/spec.js | tap-difflet"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Deadarius/markdown-toolset#readme",
   "devDependencies": {
-    "coffeetape": "^1.0.1"
+    "coffeelint": "^1.10.1",
+    "tape": "^4.0.0"
   }
 }
