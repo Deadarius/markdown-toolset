@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Deadarius/markdown-toolset#readme",
   "devDependencies": {
-    "coffeelint": "^1.10.1",
+    "tap-difflet": "^0.3.0",
     "tape": "^4.0.0"
   }
 }
