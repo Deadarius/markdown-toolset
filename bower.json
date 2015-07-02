@@ -1,0 +1,23 @@
+{
+  "name": "markdown-toolset",
+  "main": "dist/markdown-toolset.js",
+  "version": "0.0.1",
+  "description": "Tiny module for markdown editing.",
+  "homepage": "https://github.com/Deadarius/markdown-toolset",
+  "authors": [
+    "Alex Lapa <alex.lapa@live.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests"
+  ],
+  "keywords": [
+    "markdown",
+    "editor",
+    "editing",
+    "tools"
+  ]
+}
