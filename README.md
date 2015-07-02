@@ -11,8 +11,17 @@ There are plenty of markdown editors out there but no simple small tool that pro
 ## Where?
 
 ```
-npm install markdown-toolset
+npm install markdown-toolset --save
 ```
+or
+```
+bower install markdown-toolset --save
+```
+
+or just git clone and include dist/markdown-toolset.js on your page.
+
+In browser it will try to find ```angular``` and register itself as ```markdown-toolset``` module. You then can include it in your module dependencies and inject ```markdownToolset``` service.
+Without angular it will just pollute global scope with ```markdownToolset``` object.
 
 ## How?
 
@@ -43,5 +52,10 @@ mt.code('line1\nline2\nline3') //    line1
 mt.hr()                        //***
                                //
 ```
+
+## More?
+
+Need to include support for .link() and .image().
+Might be a good idea to make it configurable.
 ## License?
 MIT
