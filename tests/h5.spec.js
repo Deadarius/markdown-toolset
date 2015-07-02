@@ -16,7 +16,7 @@ test('.h5() should not add another newline if text has one already', function (t
 })
 
 test('.h5() should remove # prefix from header text without newline and newline should not be added', function (t) {
-  var text = '# text'
+  var text = '##### text'
   var unheaded = mt.h5(text)
   t.equal(unheaded, 'text')
   t.end()
