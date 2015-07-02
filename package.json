@@ -1,10 +1,11 @@
 {
   "name": "markdown-toolset",
   "version": "0.0.1",
-  "description": "Tiny module for markdown editing",
+  "description": "Tiny module for markdown editing.",
   "main": "index.js",
   "scripts": {
-    "test": "standard && tape tests/*.spec.js | tap-difflet"
+    "test": "standard && tape tests/*.spec.js | tap-difflet",
+    "build": "standard && tape tests/*.spec.js && rm -rf ./dist && mkdir ./dist && browserify ./index.js -o ./dist/markdown-toolset.js"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,19 @@
   },
   "homepage": "https://github.com/Deadarius/markdown-toolset#readme",
   "devDependencies": {
+    "browserify": "^10.2.4",
     "standard": "^4.5.1",
     "tap-difflet": "^0.3.0",
     "tape": "^4.0.0",
     "tape-catch": "^1.0.4"
-  }
+  },
+  "standard":{
+    "ignore": "dist"
+  },
+  "keywords": [
+    "markdown",
+    "editor",
+    "editing",
+    "tools"
+  ]
 }
