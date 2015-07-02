@@ -1,16 +1,20 @@
 {
   "name": "markdown-toolset",
   "version": "0.0.1",
-  "description": "",
+  "description": "Tiny module for markdown editing",
   "main": "index.js",
   "scripts": {
     "test": "standard && tape tests/*.spec.js | tap-difflet"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Deadarius/markdown-toolset.git"
+    "url": "git@github.com:Deadarius/markdown-toolset.git"
   },
-  "author": "",
+  "author": {
+    "email": "alex.lapa@live.com",
+    "name": "Alex Lapa",
+    "url": "http://alex.kiwi/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Deadarius/markdown-toolset/issues"
