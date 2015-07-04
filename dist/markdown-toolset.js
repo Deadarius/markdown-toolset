@@ -23,22 +23,46 @@ module.exports = {
     return surroundOrUnsurround(text, '*')
   },
   h1: function (text) {
-    return prefixOrUnprefix(text, '# ', true)
+    return prefixOrUnprefix(text, '# ')
   },
   h2: function (text) {
-    return prefixOrUnprefix(text, '## ', true)
+    return prefixOrUnprefix(text, '## ')
   },
   h3: function (text) {
-    return prefixOrUnprefix(text, '### ', true)
+    return prefixOrUnprefix(text, '### ')
   },
   h4: function (text) {
-    return prefixOrUnprefix(text, '#### ', true)
+    return prefixOrUnprefix(text, '#### ')
   },
   h5: function (text) {
-    return prefixOrUnprefix(text, '##### ', true)
+    return prefixOrUnprefix(text, '##### ')
   },
   h6: function (text) {
-    return prefixOrUnprefix(text, '###### ', true)
+    return prefixOrUnprefix(text, '###### ')
+  },
+  header: function (text) {
+    var len = text.length
+    if (len > 1 && text[0] === '#') {
+      var hashes = 1
+      var textUnheaded
+      for (var i = 1; i < len && i < 7; i++) {
+        if (text[i] === '#') {
+          hashes++
+        } else {
+          textUnheaded = text.slice(hashes + 1, len)
+          break
+        }
+      }
+      hashes++
+      if (hashes === 7) {
+        return textUnheaded
+      }
+      var fnName = 'h' + hashes
+      var fn = this[fnName]
+      return fn(textUnheaded)
+    } else {
+      return this.h1(text)
+    }
   },
   ul: function (text) {
     var lines = text.split('\n')
@@ -68,19 +92,13 @@ module.exports = {
 }
 
 },{"./prefix-or-unprefix":3,"./surround-or-unsurround":4}],3:[function(require,module,exports){
-module.exports = function prefixOrUnprefix (text, prefix, needNewline) {
+module.exports = function prefixOrUnprefix (text, prefix) {
   var len = prefix.length
   if (text.length > len && text.substring(0, len) === prefix) {
     return text.slice(len, text.length)
   }
 
   var res = prefix + text
-
-  if (needNewline) {
-    if (res.slice(res.length - 1, res.length) !== '\n') {
-      return res + '\n'
-    }
-  }
 
   return res
 }
