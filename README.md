@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Deadarius/markdown-toolset.svg?branch=master)](https://travis-ci.org/Deadarius/markdown-toolset)
 [![Dependencies status](https://david-dm.org/Deadarius/markdown-toolset.svg)](https://david-dm.org/Deadarius/markdown-toolset)
+[![codecov.io](http://codecov.io/github/Deadarius/markdown-toolset/coverage.svg?branch=master)](http://codecov.io/github/Deadarius/markdown-toolset?branch=master)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 ## What?
