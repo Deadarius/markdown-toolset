@@ -15,7 +15,7 @@ if (!process.browser && typeof module === 'object') {
 var surroundOrUnsurround = require('./surround-or-unsurround')
 var prefixOrUnprefix = require('./prefix-or-unprefix')
 
-module.exports = {
+var mt = {
   bold: function (text) {
     return surroundOrUnsurround(text, '**')
   },
@@ -58,10 +58,10 @@ module.exports = {
         return textUnheaded
       }
       var fnName = 'h' + hashes
-      var fn = this[fnName]
+      var fn = mt[fnName]
       return fn(textUnheaded)
     } else {
-      return this.h1(text)
+      return mt.h1(text)
     }
   },
   ul: function (text) {
@@ -90,6 +90,8 @@ module.exports = {
     return lines.join('\n')
   }
 }
+
+module.exports = mt
 
 },{"./prefix-or-unprefix":3,"./surround-or-unsurround":4}],3:[function(require,module,exports){
 module.exports = function prefixOrUnprefix (text, prefix) {
