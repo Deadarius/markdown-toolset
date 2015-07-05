@@ -1,7 +1,7 @@
 {
   "name": "markdown-toolset",
   "main": "dist/markdown-toolset.js",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Tiny module for markdown editing.",
   "homepage": "https://github.com/Deadarius/markdown-toolset",
   "authors": [
