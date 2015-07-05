@@ -8,6 +8,7 @@
     "coverage": "covert tests/*.spec.js",
     "coverage-report": "istanbul cover tests/index.js",
     "coverage-codecov": "npm run coverage-report && cat ./coverage/lcov.info | codecov",
+    "coverage-coveralls": "npm run coverage-report && cat ./coverage/lcov.info | coveralls",
     "build": "standard && tape tests/*.spec.js && rm -rf ./dist && mkdir ./dist && browserify ./index.js -o ./dist/markdown-toolset.js"
   },
   "repository": {
@@ -27,6 +28,7 @@
   "devDependencies": {
     "browserify": "^10.2.4",
     "codecov.io": "^0.1.5",
+    "coveralls": "^2.11.2",
     "istanbul": "^0.3.17",
     "standard": "^4.5.1",
     "tap-difflet": "^0.3.0",
