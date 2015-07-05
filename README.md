@@ -33,29 +33,34 @@ Without angular it will just pollute global scope with ```markdownToolset``` obj
 ```js
 var mt = require('markdown-toolset')
 
-mt.italic('text')              //*text*
-mt.bold('text')                //**text**
-mt.h1('text')                  //# text
-mt.h2('text')                  //## text
-mt.h3('text')                  //### text
-mt.h4('text')                  //#### text
-mt.h5('text')                  //##### text
-mt.h6('text')                  //###### text
+mt.italic('text')                                //*text*
+mt.bold('text')                                  //**text**
+mt.h1('text')                                    //# text
+mt.h2('text')                                    //## text
+mt.h3('text')                                    //### text
+mt.h4('text')                                    //#### text
+mt.h5('text')                                    //##### text
+mt.h6('text')                                    //###### text
+mt.header('### text')                            //#### text - returns next header or cycles back to text
+mt.link('http://example.com', 'text')            //[text](http://example.com)
+mt.image('http://example.com/image.png', 'text') //![text](http://example.com/image.png)
 
-mt.ul('line1\nline2\nline3')   //* line1
-                               //* line2
-                               //* line3
 
-mt.ol('line1\nline2\nline3')   //1. line1
-                               //2. line2
-                               //3. line3
 
-mt.code('line1\nline2\nline3') //    line1
-                               //    line2
-                               //    line3
+mt.ul('line1\nline2\nline3')                     //* line1
+                                                 //* line2
+                                                 //* line3
 
-mt.hr()                        //***
-                               //
+mt.ol('line1\nline2\nline3')                     //1. line1
+                                                 //2. line2
+                                                 //3. line3
+
+mt.code('line1\nline2\nline3')                   //    line1
+                                                 //    line2
+                                                 //    line3
+
+mt.hr()                                          //***
+                                                 //
 ```
 
 ## More?
