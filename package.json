@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "standard && tape tests/*.spec.js | tap-difflet",
+    "coverage": "covert tests/*.spec.js",
+    "coverage-report": "istanbul cover tests/*.spec.js",
+    "coverage-codecov": "npm run coverage-report && cat ./coverage/lcov.info | codecov",
     "build": "standard && tape tests/*.spec.js && rm -rf ./dist && mkdir ./dist && browserify ./index.js -o ./dist/markdown-toolset.js"
   },
   "repository": {
@@ -23,6 +26,7 @@
   "homepage": "https://github.com/Deadarius/markdown-toolset#readme",
   "devDependencies": {
     "browserify": "^10.2.4",
+    "istanbul": "^0.3.17",
     "standard": "^4.5.1",
     "tap-difflet": "^0.3.0",
     "tape": "^4.0.0",
