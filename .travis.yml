@@ -6,7 +6,5 @@ node_js:
 env:
   - NODE_ENV=production
 install: npm install --production=false
-script:
-  - npm test
-  - npm run coverage-codecov
-  - npm run coverage-coveralls
+script: npm test
+after_success: npm run coverage-codecov
