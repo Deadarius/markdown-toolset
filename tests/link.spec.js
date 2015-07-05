@@ -5,7 +5,7 @@ test('.link() should return properly formatted link', function (t) {
   var text = 'text'
   var url = 'http://www.url.com'
 
-  var linked = mt.link(text, url)
+  var linked = mt.link(url, text)
   t.equal(linked, '[text](http://www.url.com)')
   t.end()
 })
