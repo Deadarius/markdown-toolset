@@ -88,6 +88,12 @@ var mt = {
       lines[i] = prefixOrUnprefix(lines[i], '    ')
     }
     return lines.join('\n')
+  },
+  link: function (url, text) {
+    return '[' + (text || '') + '](' + url + ')'
+  },
+  image: function (url, text) {
+    return '!' + mt.link(url, text)
   }
 }
 
