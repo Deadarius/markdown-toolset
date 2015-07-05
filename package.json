@@ -26,6 +26,7 @@
   "homepage": "https://github.com/Deadarius/markdown-toolset#readme",
   "devDependencies": {
     "browserify": "^10.2.4",
+    "codecov.io": "^0.1.5",
     "istanbul": "^0.3.17",
     "standard": "^4.5.1",
     "tap-difflet": "^0.3.0",
