@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/Deadarius/markdown-toolset.svg?branch=master)](https://travis-ci.org/Deadarius/markdown-toolset)
 [![Dependencies status](https://david-dm.org/Deadarius/markdown-toolset.svg)](https://david-dm.org/Deadarius/markdown-toolset)
-[![Code Climate](https://codeclimate.com/github/Deadarius/markdown-toolset/badges/gpa.svg)](https://codeclimate.com/github/Deadarius/markdown-toolset)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 ## What?
@@ -64,8 +63,6 @@ mt.hr()                                          //***
 ```
 
 ## More?
-
-Need to include support for .link() and .image().
 Might be a good idea to make it configurable.
 ## License?
 MIT
